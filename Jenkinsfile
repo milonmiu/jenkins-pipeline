@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                echo 'Hello Milon'
             }
         }
         stage('DevOps') {
             steps {
-                echo 'Hello DevOps'
+                echo 'Welcom to DevOps'
             }
         }
     }
