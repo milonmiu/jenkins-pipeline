@@ -1,15 +1,15 @@
-
 pipeline {
     agent any
+
     stages {
-        stage('Clone Repo') {
+        stage('Hello') {
             steps {
-                echo '11'
+                echo 'Hello World'
             }
         }
-        stage('Build') {
+        stage('DevOps') {
             steps {
-                echo '22'
+                echo 'Hello DevOps'
             }
         }
     }
