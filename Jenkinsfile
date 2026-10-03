@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Deploying to ${env.APP_ENV}"
+                echo "Deploying to ${APP_ENV}"
             }
         }
     }
