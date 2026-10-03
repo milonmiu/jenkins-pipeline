@@ -1,18 +1,14 @@
 pipeline {
     agent any
     environment {
-        USER_NAME = 'Md. Rubel Hassan Milon'
+        APP_ENV = 'production'
     }
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello Milon ${env.USER_NAME}'
-            }
-        }
-        stage('DevOps') {
-            steps {
-                echo 'Welcom to DevOps'
+                echo "Deploying to ${env.APP_ENV}"
             }
         }
     }
 }
+
