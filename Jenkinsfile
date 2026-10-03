@@ -1,12 +1,14 @@
 pipeline {
     agent any
-    environment {
-        USER_NAME = 'Md. Rubel Hassan Milon'
+    parameters {
+        choice(name: 'ENV', choices: ['dev', 'stage', 'prod'], description: 'Select Environment')
+        string(name: 'TAG', defaultValue: 'v1.0', description: 'Enter Version Tag')
     }
     stages {
-        stage('Hello') {
+        stage('Deploy') {
             steps {
-                echo "Hello Milon ${env.USER_NAME}"
+                echo "Selected Environment: ${params.ENV}"
+                echo "Version Tag: ${params.TAG}"
             }
         }
     }
